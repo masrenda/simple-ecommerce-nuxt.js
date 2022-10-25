@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Fester;
+  font-weight: 400;
+  src: url("~/assets/fonts/Fester Regular.otf");
+}
+@font-face {
+  font-family: Fester;
+  font-weight: 700;
+  src: url("~/assets/fonts/Fester SemiBold.otf");
+}
+@font-face {
+  font-family: Fester;
+  font-weight: 900;
+  src: url("~/assets/fonts/Fester Bold.otf");
+}
+
+.nuxt-link-exact-active {
+  color: rgb(71 85 105 / var(--tw-text-opacity));
+  font-weight: 600;
+}
+
+.page-enter-acive,
+.page-leave-active {
+  transition: opacity 0.3s;
+}
+
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
