@@ -15,10 +15,12 @@
           <div class="space-y-2">
             <label class="text-xl">Jumlah Pesan</label>
             <form
+              v-on:submit.prevent
               class="relative flex items-center justify-between w-full border rounded-md shadow-lg"
             >
               <input
-                type="name"
+                v-model="pesan.jumlah_pemesanan"
+                type="number"
                 name="search"
                 class="w-full h-10 p-2 ring-green-400 rounded-md tracking-[1px] outline-none focus:ring-2"
                 placeholder="Cth: 1, 2, ..."
@@ -31,19 +33,20 @@
               class="relative flex items-center justify-between w-full border rounded-md shadow-lg"
             >
               <textarea
+                v-model="pesan.keterangan"
                 name="search"
                 class="w-full h-auto p-2 ring-green-400 rounded-md tracking-[1px] outline-none focus:ring-2"
                 placeholder="Cth: Banyakin bumbunya, banyakin semuanya, bisa tawar esteh jadi 2 gk bang?, dsb."
               ></textarea>
             </form>
             <div class="pt-2">
-              <nuxt-link
+              <button
+                @click="pemesanan"
                 type="button"
                 class="inline-block px-6 py-2.5 bg-green-400 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-gree-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-600 active:shadow-lg transition duration-150 tracking-[1px] ease-in-out"
-                :to="`/foods/` + product.id"
               >
                 <p class="text-white">→ Pesan</p>
-              </nuxt-link>
+              </button>
             </div>
           </div>
         </div>
@@ -65,7 +68,8 @@ export default {
   },
   data() {
     return {
-      product: [],
+      pesan: {},
+      product: {},
     };
   },
   methods: {
@@ -76,6 +80,15 @@ export default {
       return imagesName
         ? require("~/assets/images/" + this.product.gambar)
         : "";
+    },
+    pemesanan() {
+      this.pesan.products = this.product;
+      axios
+        .post("http://localhost:3000/keranjangs", this.pesan)
+        .then(() => {
+          console.log("pesanan sukses cuy");
+        })
+        .catch((err) => console.log(err));
     },
   },
   mounted() {
