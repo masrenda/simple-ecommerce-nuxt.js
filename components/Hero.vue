@@ -12,8 +12,7 @@
           <nuxt-link
             type="button"
             class="inline-block px-6 py-2.5 bg-green-400 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-gree-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-600 active:shadow-lg transition duration-150 tracking-[1px] ease-in-out"
-            :to="`/foods`"
-          >
+            :to="`/foods`"          >
             → Pesan
           </nuxt-link>
         </div>
