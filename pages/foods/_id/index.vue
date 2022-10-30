@@ -52,7 +52,10 @@
   </div>
 </div>
 </div>
-<notifications group="foo" />
+<!--Toast Notif-->
+<div class="p-20">
+  <notifications class="mt-20 mr-10"/>
+</div>
 </div>
 </template>
 
@@ -88,33 +91,12 @@ export default {
       .post("http://localhost:3000/keranjangs", this.pesan)
       .then(() => {
         this.$notify({
-    // (optional)
-    // Name of the notification holder
-    group: 'foo',
-
-    // (optional)
-    // Title (will be wrapped in div.notification-title)
-    title: 'This is the <em>title</em>',
-
-    // Content (will be wrapped in div.notification-content)
-    text: 'This is some <b>content</b>',
-
-    // (optional)
-    // Class that will be assigned to the notification
-    type: 'warn',
-
-    // (optional, override)
-    // Time (in ms) to keep the notification on screen
-    duration: 100,
-
-    // (optional, override)
-    // Time (in ms) to show / hide notifications
-    speed: 1000,
-
-    // (optional)
-    // Data object that can be used in your template
-    data: {}
-  })
+          title: '<h1 class="text-xl">Pesanan<h1>',
+          text: '<h2 class="text-[15px]">Pesanan anda sudah masuk keranjang</h2>',
+          type: 'success',
+          duration: 100,
+          speed: 1000,
+        })
       })
       .catch((err) => console.log(err));
     },
