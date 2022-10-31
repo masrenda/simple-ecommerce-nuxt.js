@@ -86,19 +86,32 @@ export default {
       : "";
     },
     pemesanan() {
-      this.pesan.products = this.product;
-      axios
-      .post("http://localhost:3000/keranjangs", this.pesan)
-      .then(() => {
+      if(this.pesan.jumlah_pemesanan) {
+        this.pesan.products = this.product;
+        axios
+        .post("http://localhost:3000/keranjangs", this.pesan)
+        .then(() => {
+          setTimeout(() => this.$router.push({
+            path: "/keranjang"
+          }), 2000)
+          this.$notify({
+            title: '<h1 class="text-xl">Pesanan<h1>',
+            text: '<h2 class="text-[15px]">Pesanan anda sudah masuk keranjang</h2><br><h2 class="text-[15px]">Mohon tunggu sejenak ...</h2>',
+            type: 'success',
+            duration: 100,
+            speed: 1000,
+          })
+        })
+        .catch((err) => console.log(err));
+      } else {
         this.$notify({
           title: '<h1 class="text-xl">Pesanan<h1>',
-          text: '<h2 class="text-[15px]">Pesanan anda sudah masuk keranjang</h2>',
-          type: 'success',
+          text: '<h2 class="text-[15px]">Pesanan harus diisi terlebih dahulu</h2>',
+          type: 'error', 
           duration: 100,
           speed: 1000,
         })
-      })
-      .catch((err) => console.log(err));
+      }
     },
   },
   mounted() {

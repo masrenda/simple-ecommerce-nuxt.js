@@ -2,7 +2,6 @@
 	<div class="p-20">
 		<button @click="showToast">toastNotif</button>
 		<notifications class="mt-20 mr-10"/>
-
 	</div>
 </template>
 
