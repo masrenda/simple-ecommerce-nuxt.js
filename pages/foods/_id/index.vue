@@ -1,64 +1,40 @@
 <template>
-  <div class="py-24 mx-auto px-44">
-    <div class="flex space-x-10">
-      <img
-      class="w-[1/2] h-[350px] bg-center bg-cover rounded"
-      :src="getImages(product.gambar)"
-      />
-      <div class="w-full space-y-3 divide-y">
-        <h1 class="text-5xl font-bold">{{ product.nama }}</h1>
-        <div class="pt-2 space-y-2">
-          <div class="flex space-x-2">
-            <h4 class="text-2xl">Harga:</h4>
-            <h4 class="text-2xl font-semibold">IDR. {{ product.harga }}</h4>
+  <div class="mx-auto px-44 py-24 ">
+    <div class="space-x-10 flex">
+      <img class="bg-center bg-cover h-[350px] w-[1/2] rounded" :src="getImages(product.gambar)" />
+      <div class="space-y-3 divide-y w-full ">
+        <h1 class="font-bold text-5xl ">{{ product.nama }}</h1>
+        <div class="pt-2 space-y-2 ">
+          <div class="space-x-2 flex">
+            <h4 class="text-2xl ">Harga:</h4>
+            <h4 class="font-semibold text-2xl ">IDR. {{ product.harga }}</h4>
           </div>
-          <div class="space-y-2">
-            <label class="text-xl">Jumlah Pesan</label>
-            <form
-            v-on:submit.prevent
-            class="relative flex items-center justify-between w-full border rounded-md shadow-lg"
-            >
-            <input
-            v-model="pesan.jumlah_pemesanan"
-            type="number"
-            name="search"
-            class="w-full h-10 p-2 ring-green-400 rounded-md tracking-[1px] outline-none focus:ring-2"
-            placeholder="Cth: 1, 2, ..."
-            />
-          </form>
+          <div class="space-y-2 ">
+            <label class="text-xl ">Jumlah Pesan</label>
+            <form v-on:submit.prevent class="shadow-lg rounded-md items-center justify-between w-full border flex relative">
+              <input v-model="pesan.jumlah_pemesanan" type="number" name="search" class="p-2 ring-green-400 rounded-md tracking-[1px] h-10 w-full outline-none focus:ring-2" placeholder="Cth: 1, 2, ..." />
+            </form>
+          </div>
+          <div class="space-y-2 ">
+            <label class="text-xl ">Keterangan</label>
+            <form class="shadow-lg rounded-md items-center justify-between w-full border flex relative">
+              <textarea v-model="pesan.keterangan" name="search" class="p-2 ring-green-400 rounded-md tracking-[1px] h-auto w-full outline-none focus:ring-2" placeholder="Cth: Banyakin bumbunya, banyakin semuanya, bisa tawar esteh jadi 2 gk bang?, dsb."></textarea>
+            </form>
+            <div class="pt-2 ">
+              <button @click="pemesanan" type="button" class="px-6 py-2.5 shadow-md duration-150 ease-in-out font-medium leading-tight text-xs tracking-[1px] uppercase bg-green-400 active:bg-green-600 active:shadow-lg focus:bg-gree-600 focus:outline-none focus:ring-0 focus:shadow-lg hover:bg-green-600 hover:shadow-lg inline-block rounded transition">
+                <p class="text-white ">→ Pesan</p>
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="space-y-2">
-          <label class="text-xl">Keterangan</label>
-          <form
-          class="relative flex items-center justify-between w-full border rounded-md shadow-lg"
-          >
-          <textarea
-          v-model="pesan.keterangan"
-          name="search"
-          class="w-full h-auto p-2 ring-green-400 rounded-md tracking-[1px] outline-none focus:ring-2"
-          placeholder="Cth: Banyakin bumbunya, banyakin semuanya, bisa tawar esteh jadi 2 gk bang?, dsb."
-          ></textarea>
-        </form>
-        <div class="pt-2">
-          <button
-          @click="pemesanan"
-          type="button"
-          class="inline-block px-6 py-2.5 bg-green-400 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-gree-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-600 active:shadow-lg transition duration-150 tracking-[1px] ease-in-out"
-          >
-          <p class="text-white">→ Pesan</p>
-        </button>
       </div>
     </div>
+    <!--Toast Notif-->
+    <div class="p-20 ">
+      <notifications class="mt-20 mr-10" />
+    </div>
   </div>
-</div>
-</div>
-<!--Toast Notif-->
-<div class="p-20">
-  <notifications class="mt-20 mr-10"/>
-</div>
-</div>
 </template>
-
 <script>
 import axios from "axios";
 
@@ -81,44 +57,47 @@ export default {
       this.product = data;
     },
     getImages(imagesName) {
-      return imagesName
-      ? require("~/assets/images/" + this.product.gambar)
-      : "";
+      return imagesName ?
+        require("~/assets/images/" + this.product.gambar) :
+        "";
     },
     pemesanan() {
-      if(this.pesan.jumlah_pemesanan) {
+      if (this.pesan.jumlah_pemesanan) {
         this.pesan.products = this.product;
         axios
-        .post("http://localhost:3000/keranjangs", this.pesan)
-        .then(() => {
-          setTimeout(() => this.$router.push({
-            path: "/keranjang"
-          }), 2000)
-          this.$notify({
-            title: '<h1 class="text-xl">Pesanan<h1>',
-            text: '<h2 class="text-[15px]">Pesanan anda sudah masuk keranjang</h2><br><h2 class="text-[15px]">Mohon tunggu sejenak ...</h2>',
-            type: 'success',
-            duration: 100,
-            speed: 1000,
+          .post("http://localhost:3000/keranjangs", this.pesan)
+          .then(() => {
+            this.$notify({
+              title: '<h1 class="text-xl ">Pesanan<h1>',
+              text: '<h2 class="text-[15px] ">Pesanan anda sudah masuk keranjang</h2><br><h2 class="text-[15px] ">Mohon tunggu sejenak ...</h2>',
+              type: 'success',
+              duration: 4000
+            })
+            setTimeout(() => this.$router.push({
+              path: "/keranjang"
+            }), 2000)
+            // this.$router.push({
+            //   path: "/keranjang"
+            // })
+
           })
-        })
-        .catch((err) => console.log(err));
+          .catch((err) => console.log(err));
       } else {
         this.$notify({
-          title: '<h1 class="text-xl">Pesanan<h1>',
-          text: '<h2 class="text-[15px]">Pesanan harus diisi terlebih dahulu</h2>',
-          type: 'error', 
-          duration: 100,
-          speed: 1000,
+          title: '<h1 class="text-xl ">Pesanan<h1>',
+          text: '<h2 class="text-[15px] ">Pesanan harus diisi terlebih dahulu</h2>',
+          type: 'error',
         })
       }
     },
   },
   mounted() {
     axios
-    .get("http://localhost:3000/products/" + this.$route.params.id)
-    .then((response) => this.setProduct(response.data))
-    .catch((error) => console.log(error));
+      .get("http://localhost:3000/products/" + this.$route.params.id)
+      .then((response) => this.setProduct(response.data))
+      .catch((error) => console.log(error));
   },
+
 };
+
 </script>

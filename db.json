@@ -101,8 +101,8 @@
   ],
   "keranjangs": [
     {
-      "jumlah_pemesanan": "12",
-      "keterangan": "Tolong tambahin sambelnya ya a'",
+      "jumlah_pemesanan": "3",
+      "keterangan": "pedes bang",
       "products": {
         "id": 2,
         "kode": "K-02",
@@ -114,223 +114,30 @@
       "id": 1
     },
     {
-      "jumlah_pemesanan": "1",
-      "keterangan": "Satenya jangan terlalu pedes bang",
+      "jumlah_pemesanan": "56",
+      "keterangan": "Kopinya jan lupa bang hehe",
       "products": {
-        "id": 1,
-        "kode": "K-01",
-        "nama": "Sate Ayam",
-        "harga": 16000,
+        "id": 3,
+        "kode": "K-03",
+        "nama": "Nasi Rames",
+        "harga": 12000,
         "is_ready": true,
-        "gambar": "sate-ayam.jpg"
+        "gambar": "nasi-rames.jpg"
       },
       "id": 2
     },
     {
-      "jumlah_pemesanan": "3",
-      "keterangan": "banyakin bawangnya mas",
+      "jumlah_pemesanan": "8",
+      "keterangan": "sedeng bang",
       "products": {
-        "id": 1,
-        "kode": "K-01",
-        "nama": "Sate Ayam",
-        "harga": 16000,
+        "id": 5,
+        "kode": "K-05",
+        "nama": "Mie Goreng",
+        "harga": 13000,
         "is_ready": true,
-        "gambar": "sate-ayam.jpg"
+        "gambar": "mie-goreng.jpg"
       },
       "id": 3
-    },
-    {
-      "jumlah_pemesanan": "32",
-      "products": {
-        "id": 1,
-        "kode": "K-01",
-        "nama": "Sate Ayam",
-        "harga": 16000,
-        "is_ready": true,
-        "gambar": "sate-ayam.jpg"
-      },
-      "id": 4
-    },
-    {
-      "jumlah_pemesanan": "12",
-      "products": {
-        "id": 1,
-        "kode": "K-01",
-        "nama": "Sate Ayam",
-        "harga": 16000,
-        "is_ready": true,
-        "gambar": "sate-ayam.jpg"
-      },
-      "id": 5
-    },
-    {
-      "jumlah_pemesanan": "12",
-      "products": {
-        "id": 1,
-        "kode": "K-01",
-        "nama": "Sate Ayam",
-        "harga": 16000,
-        "is_ready": true,
-        "gambar": "sate-ayam.jpg"
-      },
-      "id": 6
-    },
-    {
-      "jumlah_pemesanan": "2",
-      "products": {
-        "id": 3,
-        "kode": "K-03",
-        "nama": "Nasi Rames",
-        "harga": 12000,
-        "is_ready": true,
-        "gambar": "nasi-rames.jpg"
-      },
-      "id": 7
-    },
-    {
-      "jumlah_pemesanan": "23",
-      "products": {
-        "id": 3,
-        "kode": "K-03",
-        "nama": "Nasi Rames",
-        "harga": 12000,
-        "is_ready": true,
-        "gambar": "nasi-rames.jpg"
-      },
-      "id": 8
-    },
-    {
-      "jumlah_pemesanan": "12",
-      "products": {
-        "id": 3,
-        "kode": "K-03",
-        "nama": "Nasi Rames",
-        "harga": 12000,
-        "is_ready": true,
-        "gambar": "nasi-rames.jpg"
-      },
-      "id": 9
-    },
-    {
-      "jumlah_pemesanan": "32",
-      "products": {
-        "id": 1,
-        "kode": "K-01",
-        "nama": "Sate Ayam",
-        "harga": 16000,
-        "is_ready": true,
-        "gambar": "sate-ayam.jpg"
-      },
-      "id": 10
-    },
-    {
-      "jumlah_pemesanan": "21",
-      "products": {
-        "id": 1,
-        "kode": "K-01",
-        "nama": "Sate Ayam",
-        "harga": 16000,
-        "is_ready": true,
-        "gambar": "sate-ayam.jpg"
-      },
-      "id": 11
-    },
-    {
-      "jumlah_pemesanan": "12",
-      "products": {
-        "id": 9,
-        "kode": "K-09",
-        "nama": "Lontong Opor Ayam",
-        "harga": 10000,
-        "is_ready": true,
-        "gambar": "lontong-opor-ayam.jpg"
-      },
-      "id": 12
-    },
-    {
-      "jumlah_pemesanan": "54",
-      "products": {
-        "id": 4,
-        "kode": "K-04",
-        "nama": "Mie Ayam Bakso",
-        "harga": 14000,
-        "is_ready": true,
-        "gambar": "mie-ayam-bakso.jpg"
-      },
-      "id": 13
-    },
-    {
-      "jumlah_pemesanan": "13",
-      "products": {
-        "id": 4,
-        "kode": "K-04",
-        "nama": "Mie Ayam Bakso",
-        "harga": 14000,
-        "is_ready": true,
-        "gambar": "mie-ayam-bakso.jpg"
-      },
-      "id": 14
-    },
-    {
-      "jumlah_pemesanan": "12",
-      "products": {
-        "id": 2,
-        "kode": "K-02",
-        "nama": "Nasi Goreng Telur",
-        "harga": 14000,
-        "is_ready": true,
-        "gambar": "nasi-goreng-telor.jpg"
-      },
-      "id": 15
-    },
-    {
-      "jumlah_pemesanan": "34",
-      "products": {
-        "id": 9,
-        "kode": "K-09",
-        "nama": "Lontong Opor Ayam",
-        "harga": 10000,
-        "is_ready": true,
-        "gambar": "lontong-opor-ayam.jpg"
-      },
-      "id": 16
-    },
-    {
-      "jumlah_pemesanan": "723",
-      "keterangan": "banyakin piringnya",
-      "products": {
-        "id": 9,
-        "kode": "K-09",
-        "nama": "Lontong Opor Ayam",
-        "harga": 10000,
-        "is_ready": true,
-        "gambar": "lontong-opor-ayam.jpg"
-      },
-      "id": 17
-    },
-    {
-      "jumlah_pemesanan": "12",
-      "products": {
-        "id": 9,
-        "kode": "K-09",
-        "nama": "Lontong Opor Ayam",
-        "harga": 10000,
-        "is_ready": true,
-        "gambar": "lontong-opor-ayam.jpg"
-      },
-      "id": 18
-    },
-    {
-      "jumlah_pemesanan": "34",
-      "products": {
-        "id": 9,
-        "kode": "K-09",
-        "nama": "Lontong Opor Ayam",
-        "harga": 10000,
-        "is_ready": true,
-        "gambar": "lontong-opor-ayam.jpg"
-      },
-      "id": 19
     }
   ],
   "pesanans": []
