@@ -14,7 +14,7 @@
           </nuxt-link>
         </div>
       </div>
-      <img class="w-1/2 " src="~/assets/images/undraw_breakfast_psiw.svg" alt="Mukbang Skuyy" />
+      <img class="w-1/2 rounded-md" src="~/assets/images/kedai.jpg" />
     </div>
     <!--Best Foods Section || "~/components/CardProductHero.vue"-->
     <div class="pt-20 space-y-6 ">
@@ -33,6 +33,7 @@
 <script>
 import axios from "axios";
 import CardProductHero from "../components/home/CardProductHero.vue";
+
 export default {
   components: { CardProductHero },
   data() {
