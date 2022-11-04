@@ -21,7 +21,7 @@
               <textarea v-model="pesan.keterangan" name="search" class="p-2 ring-green-400 rounded-md tracking-[1px] h-auto w-full outline-none focus:ring-2" placeholder="Cth: Banyakin bumbunya, banyakin semuanya, bisa tawar esteh jadi 2 gk bang?, dsb."></textarea>
             </form>
             <div class="pt-2 ">
-              <button @click="pemesanan" type="button" class="px-6 py-2.5 shadow-md duration-150 ease-in-out font-medium leading-tight text-xs tracking-[1px] uppercase bg-green-400 active:bg-green-600 active:shadow-lg focus:bg-gree-600 focus:outline-none focus:ring-0 focus:shadow-lg hover:bg-green-600 hover:shadow-lg inline-block rounded transition">
+              <button id="submitPesanan" @click="pemesanan" type="button" class="px-6 py-2.5 shadow-md duration-150 ease-in-out font-medium leading-tight text-xs tracking-[1px] uppercase bg-green-400 active:bg-green-600 active:shadow-lg focus:bg-gree-600 focus:outline-none focus:ring-0 focus:shadow-lg hover:bg-green-600 hover:shadow-lg inline-block rounded transition">
                 <p class="text-white ">→ Pesan</p>
               </button>
             </div>
@@ -62,29 +62,22 @@ export default {
         "";
     },
     pemesanan() {
-      if (this.pesan.jumlah_pemesanan) {
+      if (this.pesan.jumlah_pemesanan <= 99999999) {
         this.pesan.products = this.product;
         axios
           .post("http://localhost:3000/keranjangs", this.pesan)
           .then(() => {
             this.$notify({
               title: '<h1 class="text-xl ">Pesanan<h1>',
-              text: '<h2 class="text-[15px] ">Pesanan anda sudah masuk keranjang</h2><br><h2 class="text-[15px] ">Mohon tunggu sejenak ...</h2>',
+              text: '<h2 class="text-[15px] ">Pesanan sukses masuk keranjang</h2><br><h2 class="text-[15px]"> Mohon tunggu... </h2>',
               type: 'success',
-              duration: 4000
-            })
-            setTimeout(() => this.$router.push({
-              path: "/keranjang"
-            }), 2000)
-            // this.$router.push({
-            //   path: "/keranjang"
-            // })
-
+            }, document.getElementById('submitPesanan').setAttribute('disabled', 'disabled'))
+            window.location.href = "/keranjang"
           })
           .catch((err) => console.log(err));
       } else {
         this.$notify({
-          title: '<h1 class="text-xl ">Pesanan<h1>',
+          title: '<h1 class="text-xl ">Peringatan<h1>',
           text: '<h2 class="text-[15px] ">Pesanan harus diisi terlebih dahulu</h2>',
           type: 'error',
         })
