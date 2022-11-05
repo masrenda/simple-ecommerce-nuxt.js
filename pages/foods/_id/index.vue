@@ -62,17 +62,24 @@ export default {
         "";
     },
     pemesanan() {
-      if (this.pesan.jumlah_pemesanan <= 99999999) {
+      if (this.pesan.jumlah_pemesanan) {
         this.pesan.products = this.product;
         axios
           .post("http://localhost:3000/keranjangs", this.pesan)
           .then(() => {
             this.$notify({
               title: '<h1 class="text-xl ">Pesanan<h1>',
-              text: '<h2 class="text-[15px] ">Pesanan sukses masuk keranjang</h2><br><h2 class="text-[15px]"> Mohon tunggu... </h2>',
+              text: '<h2 class="text-[15px] ">Mohon tunggu ...</h2>',
               type: 'success',
             }, document.getElementById('submitPesanan').setAttribute('disabled', 'disabled'))
             window.location.href = "/keranjang"
+            setTimeout(() => {
+              this.$notify({
+                title: '<h1 class="text-xl ">Pesanan<h1>',
+                text: '<h2 class="text-[15px] ">Sukses masuk keranjang</h2>',
+                type: 'success',
+              })
+            }, 1050)
           })
           .catch((err) => console.log(err));
       } else {

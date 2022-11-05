@@ -7,7 +7,10 @@
 </template>
 <script>
 import Navbar from "~/components/Navbar.vue";
-export default { components: { Navbar } };
+import bgSlay from "~/assets/images/bgImage.svg"
+
+export default {
+  components: { Navbar }
+};
 
 </script>
-<style lang="scss" scoped></style>

@@ -36,7 +36,7 @@
     </div>
     <div class="p-4 text-center text-gray-700" style="background-color: rgba(0, 0, 0, 0.2)">
       © 2022 Copyright:
-      <a class="text-gray-800" href="https://www.instagram.com/tarenadiyaksa/">tarenadiyaksa</a>
+      <a class="text-gray-800" href="https://www.instagram.com/fqhalhrts_/">kih</a>
     </div>
   </footer>
 </template>
