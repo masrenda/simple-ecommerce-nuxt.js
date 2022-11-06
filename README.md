@@ -4,9 +4,8 @@
   <br>
 </h1>
 
-<h4 align="center">an exercise in creating a simple online store using nuxt.js.</h4>
+![dokumentasi](https://user-images.githubusercontent.com/67718632/200154738-caf1dcd1-6d1f-4a8b-ba4e-bb0a1dae5a41.gif)
 
-[![dokumentasi.gif](https://s1.gifyu.com/images/dokumentasi.gif)](https://gifyu.com/image/SEgLX)
 
 ## Key Features
 
