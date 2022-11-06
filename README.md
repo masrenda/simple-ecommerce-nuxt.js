@@ -20,9 +20,6 @@ $ cd simple-ecommerce-nuxt.js
 # Install dependencies
 $ yarn install
 
-# Run the db.json in simple-ecommerce-nuxt.js directory
-$ json-server --watch db.json
-
 # Run the db.json in simple-ecommerce-nuxt.js directory (terminal 1)
 $ json-server --watch db.json
 
