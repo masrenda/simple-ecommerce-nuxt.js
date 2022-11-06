@@ -35,10 +35,6 @@ This software uses the following open source packages:
 - [vue-notification](https://github.com/euvl/vue-notification)
 - Icons are taken from [here](https://github.com/twbs/icons)
 
-## License
-
-MIT
-
 ---
 
 > GitHub [@tarenadiyaksa](https://github.com/tarenadiyaksa) &nbsp;&middot;&nbsp;
