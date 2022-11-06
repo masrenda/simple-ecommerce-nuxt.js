@@ -1,5 +1,8 @@
 # simple-ecommerce-nuxt.js
 
+
+https://user-images.githubusercontent.com/67718632/200151509-d5e1dba9-237a-4e92-9b4c-2f0d93a521aa.mp4
+
 ## Build Setup
 
 ```bash
