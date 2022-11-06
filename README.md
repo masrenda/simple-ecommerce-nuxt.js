@@ -34,6 +34,7 @@ This software uses the following open source packages:
 - [Node.js](https://nodejs.org/)
 - [vue-notification](https://github.com/euvl/vue-notification)
 - Icons are taken from [here](https://github.com/twbs/icons)
+- Reference taken from [here](https://www.youtube.com/c/WahidevAcademy)
 
 ---
 
