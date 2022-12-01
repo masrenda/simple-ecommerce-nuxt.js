@@ -1,69 +1,41 @@
-# simple-ecommerce-nuxt.js
+<h1 align="center">
+  Simple Ecommerce Nuxt-js
+  <br>
+</h1>
 
-## Build Setup
+![dokumentasi](https://user-images.githubusercontent.com/67718632/200154738-caf1dcd1-6d1f-4a8b-ba4e-bb0a1dae5a41.gif)
+
+## How To Use
+
+To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/download/), and [Yarn](https://yarnpkg.com/getting-started/install) installed on your computer. From your command line:
 
 ```bash
-# install dependencies
+# Clone this repository
+$ git clone https://github.com/tarenadiyaksa/simple-ecommerce-nuxt.js
+
+# Go into the repository
+$ cd simple-ecommerce-nuxt.js
+
+# Install dependencies
 $ yarn install
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+# Run the db.json in simple-ecommerce-nuxt.js directory (terminal 1)
+$ json-server --watch db.json
 
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
+# Run the app with different port (terminal 2)
+$ port=your_port ./node_modules/.bin/nuxt
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+## Credits
 
-## Special Directories
+This software uses the following open source packages:
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+- [Node.js](https://nodejs.org/)
+- [vue-notification](https://github.com/euvl/vue-notification)
+- Icons are taken from [here](https://github.com/twbs/icons)
+- Reference taken from [here](https://www.youtube.com/c/WahidevAcademy)
 
-### `assets`
+---
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+> GitHub [@tarenadiyaksa](https://github.com/tarenadiyaksa) &nbsp;&middot;&nbsp;
+> Twitter [@tarenadiyaksa](https://twitter.com/tarenadiyaksa)
