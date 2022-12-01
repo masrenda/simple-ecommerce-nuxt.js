@@ -1,7 +1,7 @@
 ![dokumentasi](https://user-images.githubusercontent.com/67718632/200154738-caf1dcd1-6d1f-4a8b-ba4e-bb0a1dae5a41.gif)
 
 <h1 align="center">
-  Simple Ecommerce Nuxt-js
+  Simple Ecommerce NuxtJs
   <br>
 </h1>
 
