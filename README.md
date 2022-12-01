@@ -20,7 +20,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com), [Node
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/tarenadiyaksa/simple-ecommerce-nuxt.js
+$ git clone https://github.com/masrenda/simple-ecommerce-nuxt.js
 
 # Go into the repository
 $ cd simple-ecommerce-nuxt.js
